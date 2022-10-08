@@ -30,9 +30,9 @@ pipeline {
          aws configure set aws_secret_access_key $secret_key
          aws configure set default.region ap-south-1
          DOCKER_LOGIN_PASSWORD=$(aws ecr get-login-password  --region ap-south-1)
-         docker login -u AWS -p $DOCKER_LOGIN_PASSWORD https://291611055451.dkr.ecr.ap-south-1.amazonaws.com
-         docker build -t 291611055451.dkr.ecr.ap-south-1.amazonaws.com/new-${BUILD_NUMBER} .
-         docker push 291611055451.dkr.ecr.ap-south-1.amazonaws.com/new-${BUILD_NUMBER}
+         docker login -u AWS -p $DOCKER_LOGIN_PASSWORD https://008471392674.dkr.ecr.ap-south-1.amazonaws.com
+         docker build -t 008471392674.dkr.ecr.ap-south-1.amazonaws.com/vivek/new-${BUILD_NUMBER} .
+         docker push 008471392674.dkr.ecr.ap-south-1.amazonaws.com/vivek/new-${BUILD_NUMBER}
           
 	  '''
      }   
